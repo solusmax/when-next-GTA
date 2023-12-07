@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "license": "WTFPL",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open --host",
+    "dev:tsc": "tsc --noEmit --watch",
+    "build": "npm run lint && tsc && npm run build:only",
+    "build:only": "vite build",
+    "lint": "npm run lint:ts && npm run lint:html",
+    "lint:ts": "prettier --write \"./src/**/*.{js,jsx,ts,tsx}\" && eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:html": "prettier --write \"./**/*.html\"",
+    "preview": "npm run build && npm run preview:only",
+    "preview:only": "vite preview --open --host",
+    "deploy": "npm run build && gh-pages -d \"./dist\""
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/node": "^20.10.3",
+    "@types/react": "^18.2.42",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "autoprefixer": "^10.4.16",
+    "browserslist-to-esbuild": "^1.2.0",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "gh-pages": "^6.1.0",
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.9",
+    "sharp": "^0.33.0",
+    "svgo": "^3.0.5",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.6",
+    "vite-plugin-image-optimizer": "^1.1.7"
+  }
+}
