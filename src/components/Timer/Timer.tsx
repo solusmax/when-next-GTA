@@ -23,7 +23,8 @@ export default function Timer(): JSX.Element {
   return (
     <>
       <div>
-        GTA VI is at least {daysUntilGTA6Release} days away from release.
+        <a href="https://www.rockstargames.com/VI">GTA VI</a> is at least
+        {daysUntilGTA6Release} days away from release.
       </div>
     </>
   );
