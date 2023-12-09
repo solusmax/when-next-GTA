@@ -22,11 +22,7 @@ export default function Timer(): JSX.Element {
 
   return (
     <>
-      <div
-        className="font-satisfy flex min-h-full flex-col items-center justify-center
-          bg-gradient-to-tr from-blue-700 from-5% via-pink-500 via-60% to-orange-300 p-4
-          pb-8 text-xl font-bold leading-none text-white sm:text-2xl sm:leading-none"
-      >
+      <div className="flex min-h-full flex-col items-center justify-center bg-gradient-to-tr from-blue-700 from-5% via-pink-500 via-60% to-orange-300 pb-8 font-satisfy text-xl font-bold leading-none text-white sm:text-2xl sm:leading-none">
         <div className="mb-4 transition-opacity hover:opacity-90 active:opacity-75">
           <a
             href="https://www.rockstargames.com/VI"
